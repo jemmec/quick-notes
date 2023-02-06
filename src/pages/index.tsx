@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { ThemeSwitch } from '@/components/theme-switch/theme-switch';
 import useSize from '@/hooks/use-size';
+import { Main } from '@/components/main/main';
 
 export default function Home() {
   const { size } = useSize();
@@ -17,8 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div style={{ width: size.width, height: size.height }}>
-        
-        <ThemeSwitch />
+        <Main />
       </div>
     </>
   );

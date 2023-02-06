@@ -1,0 +1,12 @@
+.divider
+{
+    background-color: var(--divider-color);
+}
+
+.main {
+    width: inherit;
+    height: inherit;
+
+    display: flex;
+    flex-direction: row;
+}

@@ -4,3 +4,9 @@
     font-weight: 100 1000;
     font-stretch: 25% 151%;
   }
+
+@font-face {
+  src: url('JetBrainsMono-Regular.ttf');
+  font-family: 'JetBrains Mono';
+  font-weight: 400;
+}

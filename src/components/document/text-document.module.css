@@ -1,0 +1,89 @@
+.textDocument {
+    width: inherit;
+    height: inherit;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.textField {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.textField:focus-within {
+    outline: 2px ridge rgba(148, 180, 250, 0.5);
+}
+
+
+.editor {
+    flex-grow: 1;
+
+    font-size: 20px;
+    line-height: 26px;
+
+    color: var(--foreground);
+
+    display: flex;
+    flex-direction: row;
+
+    text-align: start;
+    vertical-align: text-top;
+
+    font-family: 'JetBrains Mono';
+    font-weight: 400;
+
+}
+
+.editor>.lineCount {
+    font-size: inherit;
+    line-height: inherit;
+
+    width: 50px;
+    margin-right: 10px;
+    color: var(--foreground-line);
+
+    text-align: end;
+
+}
+
+.editor>textarea {
+
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+
+    text-decoration: none;
+
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0);
+
+    outline: none;
+
+    border: none;
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+.toolbar {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}

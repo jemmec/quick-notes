@@ -1,7 +1,11 @@
 .themeSwitch {
-    position: fixed;
-    top: 30px;
-    right: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px; 
 }
 
 .themeSwitch:hover {
