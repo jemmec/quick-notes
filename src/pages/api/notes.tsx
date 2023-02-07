@@ -3,7 +3,6 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import db from '@/utils/db';
 import { Timestamp } from 'firebase/firestore';
 
-
 const handler = function (req: NextApiRequest, res: NextApiResponse<any>) {
     switch (req.method) {
         case 'POST': {

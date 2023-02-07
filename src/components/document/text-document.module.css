@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
 
-
+    overflow: hidden;
 }
 
 .textField {
@@ -25,60 +25,38 @@
 
 
 .editor {
-    flex-grow: 1;
-
-    font-size: 20px;
-    line-height: 26px;
-
     color: var(--foreground);
 
     display: flex;
     flex-direction: row;
 
-    text-align: start;
-    vertical-align: text-top;
+    /* text-align: start;
+    vertical-align: text-top; */
 
     font-family: 'JetBrains Mono';
     font-weight: 400;
+    font-size: var(--editor-font-size);
+    line-height: var(--editor-line-height);
 
+    padding: 10px;
 }
 
 .editor>.lineCount {
+    flex-shrink: 0;
+
     font-size: inherit;
     line-height: inherit;
 
-    width: 50px;
-    margin-right: 10px;
+    width: 20px;
+    margin-right: 20px;
     color: var(--foreground-line);
-
     text-align: end;
 
 }
 
-.editor>textarea {
-
-    font-size: inherit;
-    line-height: inherit;
-    color: inherit;
-    font-family: inherit;
-    font-weight: inherit;
-
-    text-decoration: none;
-
-    width: 100%;
-
-    background-color: rgba(0, 0, 0, 0);
-
-    outline: none;
-
-    border: none;
-    border-color: inherit;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-
 .toolbar {
+    flex-shrink: 0;
+
     width: 100%;
     height: 50px;
 

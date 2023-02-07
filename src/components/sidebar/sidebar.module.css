@@ -1,5 +1,6 @@
 .sidebar
 {
+    flex-shrink: 0;
     height: inherit;
     width: 300px;
 }

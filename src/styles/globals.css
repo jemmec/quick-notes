@@ -1,6 +1,8 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
+  --editor-font-size: 20px;
+  --editor-line-height: 1.5;
 
   --foreground: rgb(76, 76, 76);
   --foreground-line : rgb(182, 182, 182);
@@ -49,4 +51,15 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+
+/* Prism live override styles */
+
+textarea.prism-live, pre.prism-live
+{
+
+  background: transparent;
+ 
 }

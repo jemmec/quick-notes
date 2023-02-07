@@ -27,7 +27,7 @@ export function TextDocument({ }: TextDocumentProps) {
                 <Toolbar title={title} setTitle={setTitle} />
                 <Divider thickness={2} />
                 <div className={styles.textField}>
-                    <div className={styles.editor}>
+                    <div className={`${styles.editor}`}>
                         <div className={styles.lineCount}>
                             {
                                 lines.map(x =>
@@ -37,7 +37,10 @@ export function TextDocument({ }: TextDocumentProps) {
                                 )
                             }
                         </div>
-                        <textarea onChange={handleEditorChange} value={text} />
+                        <textarea
+                            className={`prism-live language-md`}
+                            onChange={handleEditorChange}
+                            value={text} />
                     </div>
                 </div>
             </div>
