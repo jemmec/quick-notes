@@ -5,6 +5,8 @@ div.prism-live {
 	flex-flow: column;
 
 	width: 100%;
+
+	margin-left: 20px;
 }
 
 textarea.prism-live,
@@ -25,15 +27,15 @@ textarea.prism-live {
 	cursor: text;
 	white-space: pre-wrap;
 	word-spacing: normal;
-    word-break: break-word;
-    word-wrap: break-word;
+	word-break: break-word;
+	word-wrap: break-word;
 	border: 0;
 	outline: none;
 	background: transparent;
 	overflow: hidden;
 	resize: none;
-	--selection-background: hsl(320, 80%, 25%);
-	--selection-color: hsla(0, 0%, 100%, .8);
+	--selection-background: var(--editor-selection);
+	--selection-color: var(--editor-selection-color);
 }
 
 @supports (not (caret-color: black)) and (-webkit-text-fill-color: black) {

@@ -9,7 +9,7 @@ export function TextDocument({ }: TextDocumentProps) {
 
     const [text, setText] = useState('');
     const [lines, setLines] = useState([0]);
-    const [title, setTitle] = useState('');
+    const [title, setTitle] = useState('Untitled Document');
 
     function handleEditorChange(e: any) {
         //handle text change
@@ -19,6 +19,9 @@ export function TextDocument({ }: TextDocumentProps) {
             newLines.push(i);
         setLines(newLines);
         setText(e.target.value);
+    }
+
+    function handleOnBlur(e: any) {
     }
 
     return (
@@ -40,6 +43,7 @@ export function TextDocument({ }: TextDocumentProps) {
                         <textarea
                             className={`prism-live language-md`}
                             onChange={handleEditorChange}
+                            onBlur={handleOnBlur}
                             value={text} />
                     </div>
                 </div>
@@ -56,16 +60,44 @@ interface ToolbarProps {
 export function Toolbar({ title, setTitle }: ToolbarProps) {
 
     function handleTitleChange(e: any) {
-        setTitle(e.target.value);
+        const val = e.target.value;
+        setTitle(val);
     }
 
     return (
         <>
             <div className={styles.toolbar}>
+                <QuickTools />
                 <div className={styles.documentName}>
-                    <input value={title} onChange={handleTitleChange} />
+                    <input
+                        value={title}
+                        onChange={handleTitleChange}
+                        onFocus={(e: any) => { e.target.select() }}
+                    />
                 </div>
-                <ThemeSwitch />
+                <ThemeSwitch size={24} />
+            </div>
+        </>
+    )
+}
+
+export function QuickTools({ }) {
+    return (
+        <>
+            <div className={styles.quickTools}>
+                <QuickToolIcon codepoint='&#xe242;' />
+                <QuickToolIcon codepoint='&#xe745;' />
+                <QuickToolIcon codepoint='&#xe838;' />
+            </div>
+        </>
+    )
+}
+
+export function QuickToolIcon({ codepoint, size = 24 }: { codepoint: string, size?: 18 | 24 | 36 | 48 }) {
+    return (
+        <>
+            <div className={styles.quickToolIcon}>
+                <span className={`material-icons md-${size}`}>{`${codepoint}`}</span>
             </div>
         </>
     )

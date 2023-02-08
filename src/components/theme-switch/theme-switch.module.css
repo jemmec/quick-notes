@@ -11,3 +11,7 @@
 .themeSwitch:hover {
     cursor: pointer;
 }
+
+.themeSwitch>svg{
+    fill: var(--foreground);
+}

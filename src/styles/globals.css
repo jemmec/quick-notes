@@ -1,27 +1,25 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
+  --foreground: rgb(76, 76, 76);
+  --foreground-line: rgb(182, 182, 182);
+  --background: rgb(227, 227, 227);
+  --card-background: rgb(247, 247, 247);
+  --divider-color: rgb(210, 210, 210);
   --editor-font-size: 20px;
   --editor-line-height: 1.5;
-
-  --foreground: rgb(76, 76, 76);
-  --foreground-line : rgb(182, 182, 182);
-  --background: rgb(227, 227, 227);
-
-  --card-background: rgb(247, 247, 247);
-
-  --divider-color: rgb(210, 210, 210);
+  --editor-selection: rgba(65, 181, 194, 0.5);
+  --editor-selection-color: rgb(255, 255, 255);
 }
 
 
 [data-theme='dark'] {
   --foreground: rgb(211, 211, 211);
-  --foreground-line : rgb(93, 93, 93);
+  --foreground-line: rgb(93, 93, 93);
   --background: rgb(26, 26, 26);
-  
   --card-background: rgb(39, 39, 39);
-
   --divider-color: rgb(40, 40, 40);
+  --editor-selection: rgba(97, 29, 165, 0.734);
 }
 
 * {
@@ -35,6 +33,11 @@ body {
   font-family: 'Roboto Flex';
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+input {
+  font-family: 'Roboto Flex';
+  line-height: 1.5;
 }
 
 body {
@@ -54,12 +57,29 @@ a {
 }
 
 
-
 /* Prism live override styles */
 
-textarea.prism-live, pre.prism-live
-{
+textarea.prism-live,
+pre.prism-live {
 
   background: transparent;
- 
+
+}
+
+/* Material icons size */
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
 }
