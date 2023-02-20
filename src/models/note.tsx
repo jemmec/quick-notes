@@ -37,7 +37,7 @@ export default interface Note {
     /**
      * the body content of the note document
      */
-    body: string[];
+    body: string;
 
     /**
      * Has this note been starred

@@ -16,7 +16,7 @@ export function Main({ origin }: MainProps) {
     const [currentNote, setCurrentNote] = useState<Note>();
 
     useEffect(() => {
-        getNotes().then(notes => setNotes(notes));
+        // getNotes().then(notes => setNotes(notes));
     }, [origin]);
 
     return (
