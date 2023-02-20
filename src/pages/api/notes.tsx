@@ -23,7 +23,7 @@ function handlePost(req: NextApiRequest, res: NextApiResponse<void>) {
 }
 
 function handleGet(req: NextApiRequest, res: NextApiResponse<Note[]>) {
-    res.status(200).json([{ id: 2197912739, title: "My note", body: "body", tags: ["a", "b"], timestamp: Timestamp.fromDate(new Date()) }]);
+    res.status(200).json([]);
 }
 
 export default handler;

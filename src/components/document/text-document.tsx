@@ -1,11 +1,12 @@
+import Note from '@/models/note';
 import React, { ReactElement, useEffect, useState } from 'react';
 import { Divider } from '../main/main';
 import { ThemeSwitch } from '../theme-switch/theme-switch';
 import styles from './text-document.module.css';
 interface TextDocumentProps {
-
+    currentNote: Note;
 }
-export function TextDocument({ }: TextDocumentProps) {
+export function TextDocument({ currentNote }: TextDocumentProps) {
 
     const [text, setText] = useState('');
     const [lines, setLines] = useState([0]);
